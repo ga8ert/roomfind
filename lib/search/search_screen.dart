@@ -9,24 +9,95 @@ class SearchScreen extends StatelessWidget {
     return Column(
       children:[
         Center(
+          heightFactor: 3,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: SizeConfig.safeBlockHorizontal * 15,
+              ),
+             RaisedButton(
+                 onPressed: () {
+                    //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
+                  },
+                 color:  Color(0xFFf5fafd),
+                  padding: EdgeInsets.only(top: 20, left: 20, bottom: 20, right: 20,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.horizontal(
+                      left: const Radius.circular(100.0),
+                      right: const Radius.circular(100.0),
+                    ),
+
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.download_rounded,
+                        color: Color(0xFF3299d1),
+                        size: 20.0,
+                      ),
+                      Text(' Договір на аренду квартири',
+                        style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w300,
+                          color: Color(0xFF3299d1),
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  )
+              ),
+
+              SizedBox(
+                width: SizeConfig.blockSizeHorizontal * 10,
+              ),
+
+              FlatButton(
+                minWidth: 20,
+                textColor: Color(0xFF3299d1),
+                onPressed: () {},
+                shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.login,
+                      color: Color(0xFF3299d1),
+                      size: 16.0,
+                    ),
+                    Text(' Увійти',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        Center(
           child: Container(
-            margin: EdgeInsets.only(top: 300),
+            margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 20),
            height: SizeConfig.safeBlockVertical * 13,
            width: SizeConfig.safeBlockHorizontal * 100,
             child: Column(
               children:[
-                Text('Logotype',
+                Text('LOGOTYPE',
                 style: TextStyle(
                   fontSize: 55,
                   color: Color.fromRGBO(96, 112, 255, 1),
                   fontFamily: 'Roboto',
-
+                  fontWeight: FontWeight.w100,
                 ),
               ),
             ],
           ),
       ),
         ),
+
         Container(
            padding: EdgeInsets.only(
                top: 64,
@@ -47,56 +118,92 @@ class SearchScreen extends StatelessWidget {
                   ),
                 ],
               ),
-          //child: TextFormField(),
-            ),
-        Row(
+          child: TextFormField(
+            cursorHeight: 10,
+            decoration: InputDecoration(
 
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                top:64,
-                left: 680,
-              ),
-              child: RaisedButton(
-                onPressed: () {
-                  //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
-                },
-                padding: EdgeInsets.only(top: 64, left: 280,),
-                  color: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.horizontal(
-                    left: const Radius.circular(100.0),
-                    right: const Radius.circular(100.0),
+                labelText: 'Enter your username'
+            ),
+          ),
+            ),
+
+        Container(
+          child: Center(
+            heightFactor: 3,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  RaisedButton(
+                      onPressed: () {
+                        //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
+                      },
+                      color:  Color(0xFF3299d1),
+                      padding: EdgeInsets.only(top: 25.5, left: 114, bottom: 23.5, right: 114,),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.horizontal(
+                          left: const Radius.circular(100.0),
+                          right: const Radius.circular(100.0),
+                        ),
+                      ),
+                      child: Row(
+                       children: [
+                         Icon(
+                           Icons.search_sharp,
+                           color: Colors.white,
+                           size: 20.0,
+                         ),
+                         Text(' Шукати',
+                           style: TextStyle(
+                             fontFamily: 'Roboto',
+                             fontWeight: FontWeight.w300,
+                             color: Colors.white,
+                             fontSize: 16,
+                           ),
+                         ),
+                       ],
+                     )
                   ),
-                ),
-                ),
-            ),
 
-          ],
-        ),
-
-        Row(
-          children: [
-            Container(
-              height: SizeConfig.safeBlockVertical * 6.3,
-              width: SizeConfig.safeBlockHorizontal * 12,
-              child: RaisedButton(
-                onPressed: () {
-                  //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
-                },
-                color: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.horizontal(
-                    left: const Radius.circular(100.0),
-                    right: const Radius.circular(100.0),
+                  SizedBox(
+                    width: 20,
                   ),
-                ),
+
+                  FlatButton(
+                    onPressed: () {
+                      //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
+                    },
+                    padding: EdgeInsets.only(top: 25.5, left:55, bottom: 23.5, right: 55,),
+                    color:  Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.horizontal(
+                        left: const Radius.circular(100.0),
+                        right: const Radius.circular(100.0),
+
+                      ),
+                      side: BorderSide(color: Color(0xFF3299d1),),
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.add_circle_outline,
+                          color: Color(0xFF3299d1),
+                          size: 20.0,
+                        ),
+                        Text(' Розмістити інформацію',
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w300,
+                            color: Color(0xFF3299d1),
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            ),
-
-          ],
+          ),
         ),
-
       ],
     );
   }
