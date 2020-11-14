@@ -2,10 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:roomfind/size_config/size_config.dart';
 
+import 'no_search_activity.dart';
+
 class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+
     return Column(
       children:[
         Center(
@@ -20,15 +23,15 @@ class SearchScreen extends StatelessWidget {
                  onPressed: () {
                     //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
                   },
-                 color:  Color(0xFFf5fafd),
+                 color:  Colors.transparent,
                   padding: EdgeInsets.only(top: 20, left: 20, bottom: 20, right: 20,),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.horizontal(
                       left: const Radius.circular(100.0),
                       right: const Radius.circular(100.0),
                     ),
-
                   ),
+
                   child: Row(
                     children: [
                       Icon(
@@ -97,35 +100,56 @@ class SearchScreen extends StatelessWidget {
           ),
       ),
         ),
+        Stack(
+          children:[
+            Container(
+            padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockSizeHorizontal * 20),
 
-        Container(
-           padding: EdgeInsets.only(
-               top: 64,
-          ),
-              height: SizeConfig.safeBlockVertical * 6.5,
-              width: SizeConfig.safeBlockHorizontal * 61,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.horizontal(
-                  left: const Radius.circular(100.0),
-                  right: const Radius.circular(100.0),
-                ),
-                boxShadow:[
-                  BoxShadow(
-                    offset: Offset(0,0),
-                    blurRadius: 1,
-                    color: Colors.black12,
-                  ),
-                ],
+            child: TextField(
+              style: TextStyle(
+                fontSize: 12,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w300,
               ),
-          child: TextFormField(
-            cursorHeight: 10,
-            decoration: InputDecoration(
+              decoration: InputDecoration(
+                labelText: 'Телефон або адреса *',
+                labelStyle: TextStyle(
+                  fontSize: 12,
+                       fontFamily: 'Roboto',
+                       fontWeight: FontWeight.w300,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xFFE2E2E2),
+                  ),
+                  borderRadius: BorderRadius.horizontal(
+                    left: const Radius.circular(100.0),
+                    right: const Radius.circular(100.0),
+                  ),
 
-                labelText: 'Enter your username'
+              ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xFFE2E2E2),
+                  ),
+                  borderRadius: BorderRadius.horizontal(
+                    left: const Radius.circular(100.0),
+                    right: const Radius.circular(100.0),
+                  ),
+                ),
+                hintText: 'Введіть телефон, або адресу...',
+                hintStyle: TextStyle(
+                  fontSize: 12,
+                       fontFamily: 'Roboto',
+                       fontWeight: FontWeight.w300,
+                ),
+                isDense: true,
+                contentPadding: EdgeInsets.symmetric(vertical: 25, horizontal: 27),
             ),
           ),
-            ),
+      ),
+    ],
+        ),
 
         Container(
           child: Center(
@@ -135,10 +159,13 @@ class SearchScreen extends StatelessWidget {
                 children:[
                   RaisedButton(
                       onPressed: () {
-                        //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) =>NoSearchActivity()));
                       },
                       color:  Color(0xFF3299d1),
-                      padding: EdgeInsets.only(top: 25.5, left: 114, bottom: 23.5, right: 114,),
+                      padding: EdgeInsets.symmetric(
+                          vertical: SizeConfig.blockSizeVertical * 2.4,
+                          horizontal: SizeConfig.blockSizeHorizontal * 6,
+                      ),//(top: 25.5, left: 114, bottom: 23.5, right: 114,),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.horizontal(
                           left: const Radius.circular(100.0),
@@ -172,7 +199,9 @@ class SearchScreen extends StatelessWidget {
                     onPressed: () {
                       //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
                     },
-                    padding: EdgeInsets.only(top: 25.5, left:55, bottom: 23.5, right: 55,),
+                    padding: EdgeInsets.symmetric(
+                      vertical: SizeConfig.blockSizeVertical * 2.4,
+                      horizontal: SizeConfig.blockSizeHorizontal * 3,),
                     color:  Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.horizontal(

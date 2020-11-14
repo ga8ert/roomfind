@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roomfind/search/no_search_activity.dart';
 import 'package:roomfind/search/search_screen.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SearchScreen(),
+      body: NoSearchActivity(),
     );
   }
 }
