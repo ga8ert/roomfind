@@ -79,12 +79,8 @@ flutter:
            weight: 700
          - asset: assets/fonts/Roboto-Medium.ttf
            weight: 800
-         - asset: assets/fonts/Roboto-MediumItalic.ttf
-           weight: 900
          - asset: assets/fonts/Roboto-Regular.ttf
-
-
-
+           weight: 900
 
   #   - family: Trajan Pro
   #     fonts:

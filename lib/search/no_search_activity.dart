@@ -176,13 +176,8 @@ class NoSearch extends StatelessWidget {
                        padding: EdgeInsets.only(
                          top: SizeConfig.blockSizeVertical * 0.1,
                          left: SizeConfig.blockSizeHorizontal * 0.1,),
-                      color:  Colors.transparent,                      // shape: RoundedRectangleBorder(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: const Radius.circular(10000.0),
-                          right: const Radius.circular(10000.0),
-                        ),
-                        ),
+                      color:  Colors.transparent,
+                      shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
                       child: Row(
                         children: [
                           Icon(
@@ -194,19 +189,97 @@ class NoSearch extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Container(
+                    padding: EdgeInsets.only( top: SizeConfig.blockSizeVertical * 6.3),
+                    child: FlatButton(
+                      minWidth: 20,
+                      textColor: Color(0xFF3299d1),
+                      onPressed: () {},
+                      shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.search_sharp,
+                            color: Color(0xFF3299d1),
+                            size: 16.0,
+                          ),
+                          Text(' Шукати',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
           ),
-          // Row(
-          //   children: [
-          //     Column(
-          //       children: [
-          //
-          //       ],
-          //     ),
-          //   ],
-          // ),
+          const Divider(
+            color: Colors.grey,
+            height: 70,
+            thickness: 1,
+            endIndent: 0,
+          ),
+          Center(
+            heightFactor: 2,
+            child: Text('Нажаль за вашим результатом нічого не зайдено...',
+              style: TextStyle(
+                color: Color(0xFF999999),
+                fontSize: 36,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              // SizedBox(
+              //   width: SizeConfig.blockSizeHorizontal * 41,
+              //   height: SizeConfig.blockSizeVertical*2,
+              // ),
+              Container(
+                padding: EdgeInsets.only(left: SizeConfig.blockSizeHorizontal * 41, top: SizeConfig.blockSizeVertical * 3),
+                child: FlatButton(
+                  onPressed: () {
+                    //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
+                  },
+                  padding: EdgeInsets.symmetric(
+                    vertical: SizeConfig.blockSizeVertical * 2.4,
+                    horizontal: SizeConfig.blockSizeHorizontal * 3,),
+                  color:  Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.horizontal(
+                      left: const Radius.circular(100.0),
+                      right: const Radius.circular(100.0),
+                    ),
+                    side: BorderSide(color: Color(0xFF3299d1),),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.add_circle_outline,
+                        color: Color(0xFF3299d1),
+                        size: 20.0,
+                      ),
+                      Text(' Розмістити інформацію',
+                        style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w300,
+                          color: Color(0xFF3299d1),
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+            ],
+          ),
         ],
       ),
     );
