@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:roomfind/ui/login/log_in.dart';
 import 'package:roomfind/utils/size_config.dart';
 
 import '../search_result/search_results_form.dart';
@@ -57,7 +58,7 @@ class MainForm extends StatelessWidget {
               FlatButton(
                 minWidth: 20,
                 textColor: Color(0xFF3299d1),
-                onPressed: () {},
+                onPressed: () {Navigator.pushNamed(context,  '/log_in_page');},
                 shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
                 child: Row(
                   children: [

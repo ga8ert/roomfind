@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:roomfind/search/res/strings.dart';
+import 'package:roomfind/res/colors.dart';
+import 'package:roomfind/res/strings.dart';
+import 'package:roomfind/res/styles.dart';
+
 import 'package:roomfind/utils/size_config.dart';
 
-import '../../search/res/colors.dart';
-import '../../search/res/styles.dart';
+
 
 class SearchResultsForm extends StatelessWidget {
   @override
@@ -106,7 +108,7 @@ class NoSearch extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.account_circle_sharp,
-                            color: Colors.black,
+                            color: ApplicationColors.blue,
                             size: 30.0,
                           ),
                           Text(
@@ -215,7 +217,7 @@ class NoSearch extends StatelessWidget {
           const Divider(
             color: Colors.grey,
             height: 70,
-            thickness: 1,
+            thickness: 0.3,
             endIndent: 0,
           ),
           Center(
