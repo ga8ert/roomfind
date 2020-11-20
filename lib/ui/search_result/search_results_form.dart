@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:roomfind/res/colors.dart';
 import 'package:roomfind/res/strings.dart';
 import 'package:roomfind/res/styles.dart';
-
 import 'package:roomfind/utils/size_config.dart';
 
 
@@ -77,12 +76,7 @@ class NoSearch extends StatelessWidget {
                           ),
                           Text(
                             ApplicationTexts.textRentDoc,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w300,
-                              color: ApplicationColors.blue,
-                              fontSize: 16,
-                            ),
+                            style: Styles.robotoW300Px16,
                           ),
                         ],
                       ),
@@ -138,7 +132,7 @@ class NoSearch extends StatelessWidget {
                     labelStyle: Styles.robotoW300Px12,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFE2E2E2),
+                        color: ApplicationColors.white,
                       ),
                       borderRadius: BorderRadius.horizontal(
                         left: const Radius.circular(100.0),
@@ -147,7 +141,7 @@ class NoSearch extends StatelessWidget {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xFFE2E2E2),
+                        color: ApplicationColors.white,
                       ),
                       borderRadius: BorderRadius.horizontal(
                         left: const Radius.circular(100.0),
@@ -193,7 +187,7 @@ class NoSearch extends StatelessWidget {
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(
                       minWidth: 20,
-                      textColor: Color(0xFF3299d1),
+                      textColor: ApplicationColors.blue,
                       onPressed: () {},
                       shape: CircleBorder(
                           side: BorderSide(color: Colors.transparent)),
@@ -201,7 +195,7 @@ class NoSearch extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.search_sharp,
-                            color: Color(0xFF3299d1),
+                            color: ApplicationColors.blue,
                             size: 16.0,
                           ),
                           Text(ApplicationTexts.textSearch,
@@ -246,14 +240,14 @@ class NoSearch extends StatelessWidget {
                       right: const Radius.circular(100.0),
                     ),
                     side: BorderSide(
-                      color: Color(0xFF3299d1),
+                      color: ApplicationColors.blue,
                     ),
                   ),
                   child: Row(
                     children: [
                       Icon(
                         Icons.add_circle_outline,
-                        color: Color(0xFF3299d1),
+                        color: ApplicationColors.blue,
                         size: 20.0,
                       ),
                       Text(ApplicationTexts.textFillInformation,

@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:roomfind/res/colors.dart';
+import 'package:roomfind/res/styles.dart';
 import 'package:roomfind/ui/login/log_in.dart';
 import 'package:roomfind/utils/size_config.dart';
-
+import 'package:roomfind/res/strings.dart';
 import '../search_result/search_results_form.dart';
 
 class MainForm extends StatelessWidget {
@@ -21,7 +23,6 @@ class MainForm extends StatelessWidget {
               ),
              RaisedButton(
                  onPressed: () {
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
                   },
                  color:  Colors.transparent,
                   padding: EdgeInsets.only(top: 20, left: 20, bottom: 20, right: 20,),
@@ -36,16 +37,11 @@ class MainForm extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.download_rounded,
-                        color: Color(0xFF3299d1),
+                        color: ApplicationColors.blue,
                         size: 20.0,
                       ),
-                      Text(' Договір на аренду квартири',
-                        style: TextStyle(
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w300,
-                          color: Color(0xFF3299d1),
-                          fontSize: 16,
-                        ),
+                      Text(ApplicationTexts.textRentDoc,
+                        style: Styles.robotoW300Px16,
                       ),
                     ],
                   )
@@ -57,22 +53,18 @@ class MainForm extends StatelessWidget {
 
               FlatButton(
                 minWidth: 20,
-                textColor: Color(0xFF3299d1),
+                textColor: ApplicationColors.blue,
                 onPressed: () {Navigator.pushNamed(context,  '/log_in_page');},
                 shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
                 child: Row(
                   children: [
                     Icon(
                       Icons.login,
-                      color: Color(0xFF3299d1),
+                      color: ApplicationColors.blue,
                       size: 16.0,
                     ),
-                    Text(' Увійти',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.w800,
-                      ),
+                    Text(ApplicationTexts.textLogIn,
+                      style: Styles.robotoW800Px16,
                     ),
                   ],
                 ),
@@ -88,13 +80,8 @@ class MainForm extends StatelessWidget {
            width: SizeConfig.safeBlockHorizontal * 100,
             child: Column(
               children:[
-                Text('LOGOTYPE',
-                style: TextStyle(
-                  fontSize: 55,
-                  color: Color.fromRGBO(96, 112, 255, 1),
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w100,
-                ),
+                Text(ApplicationTexts.textLogotype,
+                style: Styles.robotoW100Px55,
               ),
             ],
           ),
@@ -106,21 +93,13 @@ class MainForm extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockSizeHorizontal * 20),
 
             child: TextField(
-              style: TextStyle(
-                fontSize: 12,
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w300,
-              ),
+              style: Styles.robotoW300Px12,
               decoration: InputDecoration(
-                labelText: 'Телефон або адреса *',
-                labelStyle: TextStyle(
-                  fontSize: 12,
-                       fontFamily: 'Roboto',
-                       fontWeight: FontWeight.w300,
-                ),
+                labelText: ApplicationTexts.textPhoneOrAddress,
+                labelStyle: Styles.robotoW300Px12,
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xFFE2E2E2),
+                    color: ApplicationColors.white,
                   ),
                   borderRadius: BorderRadius.horizontal(
                     left: const Radius.circular(100.0),
@@ -130,19 +109,15 @@ class MainForm extends StatelessWidget {
               ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xFFE2E2E2),
+                    color: ApplicationColors.white,
                   ),
                   borderRadius: BorderRadius.horizontal(
                     left: const Radius.circular(100.0),
                     right: const Radius.circular(100.0),
                   ),
                 ),
-                hintText: 'Введіть телефон, або адресу...',
-                hintStyle: TextStyle(
-                  fontSize: 12,
-                       fontFamily: 'Roboto',
-                       fontWeight: FontWeight.w300,
-                ),
+                hintText: ApplicationTexts.textEnterPhoneOrAddress,
+                hintStyle: Styles.robotoW300Px12,
                 isDense: true,
                 contentPadding: EdgeInsets.symmetric(vertical: 25, horizontal: 27),
             ),
@@ -159,9 +134,9 @@ class MainForm extends StatelessWidget {
                 children:[
                   RaisedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) =>SearchResultsForm()));
+                        Navigator.pushNamed(context,  '/search_results_screen');
                       },
-                      color:  Color(0xFF3299d1),
+                      color:  ApplicationColors.blue,
                       padding: EdgeInsets.symmetric(
                           vertical: SizeConfig.blockSizeVertical * 2.4,
                           horizontal: SizeConfig.blockSizeHorizontal * 6,
@@ -179,13 +154,8 @@ class MainForm extends StatelessWidget {
                            color: Colors.white,
                            size: 20.0,
                          ),
-                         Text(' Шукати',
-                           style: TextStyle(
-                             fontFamily: 'Roboto',
-                             fontWeight: FontWeight.w300,
-                             color: Colors.white,
-                             fontSize: 16,
-                           ),
+                         Text( ApplicationTexts.textSearch,
+                           style: Styles.robotoW300Px16w,
                          ),
                        ],
                      )
@@ -197,7 +167,7 @@ class MainForm extends StatelessWidget {
 
                   FlatButton(
                     onPressed: () {
-                      //Navigator.push(context, MaterialPageRoute(builder: (context) =>AnalysedCities()));
+
                     },
                     padding: EdgeInsets.symmetric(
                       vertical: SizeConfig.blockSizeVertical * 2.4,
@@ -209,22 +179,17 @@ class MainForm extends StatelessWidget {
                         right: const Radius.circular(100.0),
 
                       ),
-                      side: BorderSide(color: Color(0xFF3299d1),),
+                      side: BorderSide(color: ApplicationColors.blue,),
                     ),
                     child: Row(
                       children: [
                         Icon(
                           Icons.add_circle_outline,
-                          color: Color(0xFF3299d1),
+                          color: ApplicationColors.blue,
                           size: 20.0,
                         ),
-                        Text(' Розмістити інформацію',
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w300,
-                            color: Color(0xFF3299d1),
-                            fontSize: 16,
-                          ),
+                        Text(ApplicationTexts.textFillInformation,
+                          style: Styles.robotoW300Px16,
                         ),
                       ],
                     ),

@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:roomfind/res/colors.dart';
+import 'package:roomfind/res/strings.dart';
+import 'package:roomfind/res/styles.dart';
 import 'package:roomfind/utils/size_config.dart';
+
 
 class LogInForm extends StatelessWidget {
   @override
@@ -25,9 +28,9 @@ class LogInForm extends StatelessWidget {
       return Stack(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 580, vertical: 405 ),
-            height: 345 ,
-            width: 584 ,
+            //padding: EdgeInsets.symmetric(horizontal: 580, vertical: 405 ),
+            height: SizeConfig.blockSizeVertical* 35,
+            width: SizeConfig.blockSizeHorizontal* 30.4 ,
             decoration: BoxDecoration(
               color: Color(0xFFFFFFFF),
               border: Border.all(
@@ -39,9 +42,8 @@ class LogInForm extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(left: 32, top: 25),
-            padding: EdgeInsets.only(left: 211, top: 64,),
-            height: 280 ,
-            width: 520 ,
+            height: SizeConfig.blockSizeVertical * 28 ,
+            width: SizeConfig.blockSizeHorizontal * 27.2,
             decoration: BoxDecoration(
               border: Border.all(
                 color: Color(0xFFE2E2E2),
@@ -62,52 +64,54 @@ class LogInForm extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Row(
-                  children: [
-                  Text('Увійти',
-                    style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 32 ,
-                      fontWeight: FontWeight.w300,
+                Container(
+                  padding: EdgeInsets.only(left: SizeConfig.blockSizeVertical* 23, top: SizeConfig.blockSizeVertical * 6,),
+                  child: Row(
+                    children: [
+                    Text(ApplicationTexts.textLogIn,
+                      style: Styles.robotoW300Px32,
                     ),
+                  ],
                   ),
-                ],
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    RaisedButton(
-                        onPressed: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) =>SearchResultsForm()));
-                        },
-                        color:  Color(0xFF3299d1),
+                    Container(
+                      padding: EdgeInsets.only(top: 64),
+                      child: RaisedButton(
                         padding: EdgeInsets.symmetric(
-                          vertical: SizeConfig.blockSizeVertical * 2.4,
-                          horizontal: SizeConfig.blockSizeHorizontal * 6,
-                        ),//(top: 25.5, left: 114, bottom: 23.5, right: 114,),
+                          vertical: SizeConfig.blockSizeVertical *2.5,
+                          horizontal: SizeConfig.blockSizeHorizontal *1 ,
+                        ),
+                        onPressed: (){},
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.horizontal(
                             left: const Radius.circular(100.0),
                             right: const Radius.circular(100.0),
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            ImageIcon(
-                              AssetImage('assets/icon/facebook_logo.png'),
-                              size: 20,
-                              color: Colors.white,
-                            ),
-                            Text(' Шукати',
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white,
-                                fontSize: 16,
                               ),
                             ),
-                          ],
-                        )
-                    ),
+                        color: ApplicationColors.facebook_color,
+                        child: Row(
+                          children: [
+                            Container(
+                              //padding: EdgeInsets.only(right: 100),
+                              child: Image.asset('assets/icon/flogo.png'),
+                            ),
+                            SizedBox(
+                              width: SizeConfig.blockSizeHorizontal * 9,
+                            ),
+                             Text('Facebook',
+                                style: Styles.robotoW800Px12w
+                              ),
+                            SizedBox(
+                              width: SizeConfig.blockSizeHorizontal * 9,
+                            ),
+
+                              ],
+                            ),
+                        ),
+                        ),
                   ],
                 ),
               ],
