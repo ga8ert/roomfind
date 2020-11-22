@@ -24,7 +24,7 @@ class MainForm extends StatelessWidget {
              RaisedButton(
                  onPressed: () {
                   },
-                 color:  Colors.transparent,
+                 color:  Color(0xFFf5fafd),
                   padding: EdgeInsets.only(top: 20, left: 20, bottom: 20, right: 20,),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.horizontal(

@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:roomfind/res/colors.dart';
 
 class Styles {
   static TextStyle robotoW300Px12 = TextStyle(
@@ -10,7 +11,14 @@ class Styles {
   static TextStyle robotoW300Px16 = TextStyle(
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w300,
-    color: Color(0xFF3299d1),
+    color: ApplicationColors.blue,
+    fontSize: 16,
+  );
+
+  static TextStyle robotoW300Px16w = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w300,
+    color: Color(0xFFFFFFFF),
     fontSize: 16,
   );
 
@@ -20,11 +28,11 @@ class Styles {
     fontWeight: FontWeight.w300,
   );
 
-  static TextStyle robotoW300Px16w = TextStyle(
+  static TextStyle robotoW800Px14 = TextStyle(
     fontFamily: 'Roboto',
-    fontWeight: FontWeight.w300,
-    color: Color(0xFFFFFFFF),
-    fontSize: 16,
+    fontWeight: FontWeight.w800,
+    color: ApplicationColors.grey,
+    fontSize: 14,
   );
 
   static TextStyle robotoW800Px16 = TextStyle(

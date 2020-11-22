@@ -10,5 +10,20 @@ class ApplicationTexts {
   static const String textNothingFound = "Нажаль за вашим результатом нічого не зайдено...";
   static const String textFillInformation = "Розмістити інформацію";
   static const String textLogIn = "Увійти";
+  static const String textfound = 'Знайдено 3 співпадіння (2 адреси, 2 імені)';
+
+  static const String textPhone = "Телефон";
+  static const String textCity = "Місто";
+  static const String textStreet = "Вулиця";
+  static const String textName = "ПІБ";
+  static const String textRating = "Рейтинг";
+
+  static const String textPhoneNumber = "+38 097 123 14 22";
+  static const String textCityName = "Херсон";
+  static const String textStreetName = "вул. 49 Гв.Дивізії 43, кв.21";
+  static const String textFullName = "Максим";
+  static const String textRatingValue = "4,7";
+
+
 
 }
