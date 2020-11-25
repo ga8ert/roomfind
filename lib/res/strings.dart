@@ -24,6 +24,18 @@ class ApplicationTexts {
   static const String textFullName = "Максим";
   static const String textRatingValue = "4,7";
 
+  static const String textYourCity = "Ваше місто";
+  static const String textEnterStreet = "Введіть вулицю";
+  static const String textPhotoPassport = "Фото договору, паспорт";
+  static const String textSelectRating = "Оберіть рейтинг";
+  static const String textSelectFile = "Виберіть файл";
+  static const String textComment = "Комментар";
+  static const String textEnterComment = "Введіть комментар";
+
+
+
+
+
 
 
 }

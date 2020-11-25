@@ -47,6 +47,7 @@ class NoSearch extends StatelessWidget {
                         color: ApplicationColors.blue,
                         size: 20.0,
                       ),
+                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
                       Text(ApplicationTexts.textFillInformation,
                           style: Styles.robotoW300Px16),
                     ],

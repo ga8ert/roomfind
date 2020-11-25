@@ -25,7 +25,7 @@ class MainForm extends StatelessWidget {
                  onPressed: () {
                   },
                  color:  Color(0xFFf5fafd),
-                  padding: EdgeInsets.only(top: 20, left: 20, bottom: 20, right: 20,),
+                  padding: EdgeInsets.only(top: SizeConfig.blockSizeVertical * 2.2, left: SizeConfig.blockSizeHorizontal * 1.20, bottom: SizeConfig.blockSizeVertical * 2.2, right: SizeConfig.blockSizeHorizontal * 1.20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.horizontal(
                       left: const Radius.circular(100.0),
@@ -40,6 +40,7 @@ class MainForm extends StatelessWidget {
                         color: ApplicationColors.blue,
                         size: 20.0,
                       ),
+                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
                       Text(ApplicationTexts.textRentDoc,
                         style: Styles.robotoW300Px16,
                       ),
@@ -61,8 +62,11 @@ class MainForm extends StatelessWidget {
                     Icon(
                       Icons.login,
                       color: ApplicationColors.blue,
-                      size: 16.0,
+                      size: 20.0,
                     ),
+
+                    SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
+
                     Text(ApplicationTexts.textLogIn,
                       style: Styles.robotoW800Px16,
                     ),
@@ -131,71 +135,78 @@ class MainForm extends StatelessWidget {
             heightFactor: 3,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-                children:[
-                  RaisedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context,  '/search_results_screen');
-                      },
-                      color:  ApplicationColors.blue,
-                      padding: EdgeInsets.symmetric(
-                          vertical: SizeConfig.blockSizeVertical * 2.4,
-                          horizontal: SizeConfig.blockSizeHorizontal * 6,
-                      ),//(top: 25.5, left: 114, bottom: 23.5, right: 114,),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: const Radius.circular(100.0),
-                          right: const Radius.circular(100.0),
+              children: [
+                Wrap(
+
+                    children:[
+                      RaisedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context,  '/search_results_screen');
+                          },
+                          color:  ApplicationColors.blue,
+                          padding: EdgeInsets.symmetric(
+                              vertical: SizeConfig.blockSizeVertical * 3,
+                              horizontal: SizeConfig.blockSizeHorizontal * 6,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.horizontal(
+                              left: const Radius.circular(100.0),
+                              right: const Radius.circular(100.0),
+                            ),
+                          ),
+                          child: Row(
+                           children: [
+                             Icon(
+                               Icons.search_sharp,
+                               color: Colors.white,
+                               size: 20.0,
+                             ),
+
+                             SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
+
+                             Text( ApplicationTexts.textSearch,
+                               style: Styles.robotoW300Px16w,
+                             ),
+                           ],
+                         )
+                      ),
+
+                      SizedBox(width: SizeConfig.blockSizeHorizontal * 1.01),
+
+                      FlatButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context,  '/no_search_results_screen');
+                        },
+                        padding: EdgeInsets.symmetric(
+                          vertical: SizeConfig.blockSizeVertical * 3,
+                          horizontal: SizeConfig.blockSizeHorizontal * 3,),
+                        color:  Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.horizontal(
+                            left: const Radius.circular(100.0),
+                            right: const Radius.circular(100.0),
+
+                          ),
+                          side: BorderSide(color: ApplicationColors.blue,),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.add_circle_outline,
+                              color: ApplicationColors.blue,
+                              size: 20.0,
+                            ),
+                            SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
+                            Text(ApplicationTexts.textFillInformation,
+                              style: Styles.robotoW300Px16,
+                            ),
+                          ],
                         ),
                       ),
-                      child: Row(
-                       children: [
-                         Icon(
-                           Icons.search_sharp,
-                           color: Colors.white,
-                           size: 20.0,
-                         ),
-                         Text( ApplicationTexts.textSearch,
-                           style: Styles.robotoW300Px16w,
-                         ),
-                       ],
-                     )
+                    ],
                   ),
-
-                  SizedBox(
-                    width: 20,
-                  ),
-
-                  FlatButton(
-                    onPressed: () {
-
-                    },
-                    padding: EdgeInsets.symmetric(
-                      vertical: SizeConfig.blockSizeVertical * 2.4,
-                      horizontal: SizeConfig.blockSizeHorizontal * 3,),
-                    color:  Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.horizontal(
-                        left: const Radius.circular(100.0),
-                        right: const Radius.circular(100.0),
-
-                      ),
-                      side: BorderSide(color: ApplicationColors.blue,),
-                    ),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.add_circle_outline,
-                          color: ApplicationColors.blue,
-                          size: 20.0,
-                        ),
-                        Text(ApplicationTexts.textFillInformation,
-                          style: Styles.robotoW300Px16,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              ],
+            ),
           ),
         ),
       ],

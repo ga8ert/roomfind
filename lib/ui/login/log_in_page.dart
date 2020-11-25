@@ -9,6 +9,7 @@ class LogIn  extends StatelessWidget {
    Widget build(BuildContext context){
      SizeConfig().init(context);
      return Scaffold(
+       backgroundColor: Colors.transparent,
        body: (
        LogInForm()
        ),

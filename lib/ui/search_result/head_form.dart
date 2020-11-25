@@ -21,7 +21,7 @@ class HeadForm extends StatelessWidget {
                       top: SizeConfig.safeBlockVertical * 6,
                     ),
                     height: SizeConfig.safeBlockVertical * 13,
-                    width: 160,
+                    width: SizeConfig.blockSizeHorizontal * 9.5,
                     child: Column(
                       children: [
                         Text(ApplicationTexts.textLogotype,
@@ -44,10 +44,10 @@ class HeadForm extends StatelessWidget {
                       },
                       color: Color(0xFFf5fafd),
                       padding: EdgeInsets.only(
-                        top: 20,
-                        left: 20,
-                        bottom: 20,
-                        right: 20,
+                          top: SizeConfig.blockSizeVertical * 2.2,
+                          left: SizeConfig.blockSizeHorizontal * 1.20,
+                          bottom: SizeConfig.blockSizeVertical * 2.2,
+                          right: SizeConfig.blockSizeHorizontal * 1.20,
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.horizontal(
@@ -62,6 +62,7 @@ class HeadForm extends StatelessWidget {
                             color: ApplicationColors.blue,
                             size: 20.0,
                           ),
+                          SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
                           Text(
                             ApplicationTexts.textRentDoc,
                             style: Styles.robotoW300Px16,
@@ -81,7 +82,7 @@ class HeadForm extends StatelessWidget {
                     padding:
                     EdgeInsets.only(top: SizeConfig.safeBlockVertical * 3),
                     child: FlatButton(
-                      minWidth: 20,
+                      minWidth: SizeConfig.blockSizeHorizontal * 1.2,
                       textColor: ApplicationColors.blue,
                       onPressed: () {},
                       shape: CircleBorder(
@@ -93,6 +94,7 @@ class HeadForm extends StatelessWidget {
                             color: ApplicationColors.blue,
                             size: 30.0,
                           ),
+                          SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
                           Text(
                             ApplicationTexts.textHelloUserName,
                             style: Styles.robotoW800Px16,
@@ -140,7 +142,7 @@ class HeadForm extends StatelessWidget {
                     hintStyle: Styles.robotoW300Px12,
                     isDense: true,
                     contentPadding:
-                    EdgeInsets.symmetric(vertical: 25, horizontal: 27),
+                    EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical * 2.7, horizontal: SizeConfig.blockSizeVertical * 3),
                   ),
                 ),
               ),
@@ -184,8 +186,9 @@ class HeadForm extends StatelessWidget {
                           Icon(
                             Icons.search_sharp,
                             color: ApplicationColors.blue,
-                            size: 16.0,
+                            size: 20.0,
                           ),
+                          SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
                           Text(ApplicationTexts.textSearch,
                               style: Styles.robotoW800Px16),
                         ],

@@ -20,7 +20,7 @@ class LogInForm extends StatelessWidget {
       ),
       elevation: 0,
 
-      backgroundColor: Color(0xFFFFFFFF),
+     // backgroundColor: Colors.transparent,
       child: contentBox(context),
     );
   }
@@ -94,12 +94,13 @@ class LogInForm extends StatelessWidget {
                         color: ApplicationColors.facebook_color,
                         child: Row(
                           children: [
+                            SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
                             Container(
                               //padding: EdgeInsets.only(right: 100),
                               child: Image.asset('assets/icon/flogo.png'),
                             ),
                             SizedBox(
-                              width: SizeConfig.blockSizeHorizontal * 9,
+                              width: SizeConfig.blockSizeHorizontal * 8.6,
                             ),
                              Text('Facebook',
                                 style: Styles.robotoW800Px12w
