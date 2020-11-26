@@ -22,10 +22,23 @@ class Styles {
     fontSize: 16,
   );
 
+  static TextStyle robotoW300Px18 = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w300,
+    fontSize: 16,
+  );
+
   static TextStyle robotoW300Px32 = TextStyle(
     fontFamily: 'Roboto',
     fontSize: 32 ,
     fontWeight: FontWeight.w300,
+  );
+
+  static TextStyle robotoW500Px14 = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w500,
+    color: ApplicationColors.grey,
+    fontSize: 14,
   );
 
   static TextStyle robotoW800Px14 = TextStyle(
@@ -41,12 +54,36 @@ class Styles {
     fontWeight: FontWeight.w800,
   );
 
+  static TextStyle robotoW800Px16b = TextStyle(
+    fontSize: 16,
+    fontFamily: 'Roboto',
+    color: ApplicationColors.blue,
+    fontWeight: FontWeight.w800,
+  );
+
   static TextStyle robotoW800Px12w = TextStyle(
     fontSize: 12,
     fontFamily: 'Roboto',
     color: Color(0xFFFFFFFF),
     fontWeight: FontWeight.w800,
   );
+
+  static TextStyle robotoW900Px16 = TextStyle(
+    decoration: TextDecoration.underline,
+    color: Color(0xFF3299D1),
+    fontSize: 16,
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w900,
+  );
+
+  static TextStyle robotoW900Px16black = TextStyle(
+    color: ApplicationColors.black,
+    fontSize: 16,
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w900,
+  );
+
+
 
   static TextStyle robotoW900Px36 = TextStyle(
     color: Color(0xFF999999),

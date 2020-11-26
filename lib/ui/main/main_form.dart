@@ -137,8 +137,7 @@ class MainForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Wrap(
-
-                    children:[
+                  children:[
                       RaisedButton(
                           onPressed: () {
                             Navigator.pushNamed(context,  '/search_results_screen');

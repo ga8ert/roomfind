@@ -32,6 +32,12 @@ class ApplicationTexts {
   static const String textComment = "Комментар";
   static const String textEnterComment = "Введіть комментар";
 
+  static const String textPost = "Розмістити";
+  static const String text1 = "(1)";
+  static const String textInfo = "+38 097 123 14 22, м.Херсон, вул. 49 Гв.Дивізії 43, кв.21, Максим";
+  static const String textFirstAndLastName = "Александр Ветров";
+  static const String textDate = "Октябрь 2020 г.";
+  static const String textCommentFromPeople = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue malesuada venenatis. Sed at volutpat elit. Nulla vel libero venenatis odio tincidunt volutpat a a ligula.";
 
 
 
