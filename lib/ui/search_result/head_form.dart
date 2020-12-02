@@ -149,6 +149,7 @@ class HeadForm extends StatelessWidget {
               Row(
                 children: [
                   Container(
+                    alignment: Alignment.centerRight,
                     padding: EdgeInsets.only(
                         left: SizeConfig.blockSizeHorizontal * 74,
                         top: SizeConfig.blockSizeVertical * 6.3),

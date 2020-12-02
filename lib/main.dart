@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/search_results_screen': (context) => SearchResultsForm(),
         '/log_in_page' : (context) => LogIn(),
         '/no_search_results_screen' : (context) => NoSearchResultsPage(),
+
       },
     );
   }
