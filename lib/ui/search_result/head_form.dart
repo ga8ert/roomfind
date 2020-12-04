@@ -9,34 +9,28 @@ class HeadForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: SizeConfig.blockSizeHorizontal * 67,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                children: [
                   Container(
                     padding: EdgeInsets.only(
                       top: SizeConfig.safeBlockVertical * 6,
                     ),
                     height: SizeConfig.safeBlockVertical * 13,
                     width: SizeConfig.blockSizeHorizontal * 9.5,
-                    child: Column(
+                    child: Wrap(
                       children: [
                         Text(ApplicationTexts.textLogotype,
                             style: Styles.robotoW100Px30),
                       ],
                     ),
-                  ),
-                ],
-              ), //Logotype
-              SizedBox(
-                width: SizeConfig.safeBlockHorizontal * 18,
-              ),
-              Column(
-                children: [
-                  Container(
+                  ), //Logotype
+
+              Container(
                     padding:
                     EdgeInsets.only(top: SizeConfig.safeBlockVertical * 3),
                     child: RaisedButton(
@@ -70,14 +64,9 @@ class HeadForm extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),
-                ],
-              ), //Договір на оренду
-              SizedBox(
-                width: SizeConfig.safeBlockHorizontal * 17,
-              ),
-              Column(
-                children: [
+                  ),//Договір на оренду
+              //Spacer(flex: 7),
+
                   Container(
                     padding:
                     EdgeInsets.only(top: SizeConfig.safeBlockVertical * 3),
@@ -87,7 +76,7 @@ class HeadForm extends StatelessWidget {
                       onPressed: () {},
                       shape: CircleBorder(
                           side: BorderSide(color: Colors.transparent)),
-                      child: Row(
+                      child: Wrap(
                         children: [
                           Icon(
                             Icons.account_circle_sharp,
@@ -105,15 +94,14 @@ class HeadForm extends StatelessWidget {
                   ),
                 ],
               ), //UserName
-            ],
-          ),
+
           Stack(
             children: [
               Container(
+
                 padding: EdgeInsets.only(
-                  left: SizeConfig.blockSizeHorizontal * 16.7,
                   top: SizeConfig.blockSizeVertical * 5,
-                  right: SizeConfig.blockSizeHorizontal * 25.2,
+                  right: SizeConfig.blockSizeHorizontal * 15,
                 ),
                 child: TextField(
                   style: Styles.robotoW300Px12,
@@ -146,12 +134,15 @@ class HeadForm extends StatelessWidget {
                   ),
                 ),
               ),
+
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
                     alignment: Alignment.centerRight,
-                    padding: EdgeInsets.only(
-                        left: SizeConfig.blockSizeHorizontal * 74,
+                    color: Colors.yellow,
+                    margin: EdgeInsets.only(
+                        //left: SizeConfig.blockSizeHorizontal * 56,
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(
                       onPressed: () {},
@@ -165,7 +156,7 @@ class HeadForm extends StatelessWidget {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.close_sharp,
+                            Icons.close,
                             color: Color(0xFF000000),
                             size: 24.0,
                           ),
@@ -174,7 +165,8 @@ class HeadForm extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(
+                    color: Colors.blue,
+                    margin: EdgeInsets.only(
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(
                       minWidth: 20,

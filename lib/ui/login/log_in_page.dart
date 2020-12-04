@@ -9,7 +9,7 @@ class LogIn  extends StatelessWidget {
    Widget build(BuildContext context){
      SizeConfig().init(context);
      return Scaffold(
-       backgroundColor: Colors.transparent,
+       //backgroundColor: Color.fromRGBO(220, 220, 220, 0.5),
        body: (
        LogInForm()
        ),

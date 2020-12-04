@@ -17,12 +17,12 @@ class NoSearch extends StatelessWidget {
             child: Text(ApplicationTexts.textNothingFound,
                 style: Styles.robotoW900Px36),
           ),
-          Center(
-            child: Row(
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   padding: EdgeInsets.only(
-                      left: SizeConfig.blockSizeHorizontal * 41,
+                      //left: SizeConfig.blockSizeHorizontal * 41,
                       top: SizeConfig.blockSizeVertical * 3),
                   child: FlatButton(
                     onPressed: () {
@@ -58,7 +58,6 @@ class NoSearch extends StatelessWidget {
                 ),
               ],
             ),
-          ),
         ],
       ),
     );

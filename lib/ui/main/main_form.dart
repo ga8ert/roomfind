@@ -2,32 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:roomfind/res/colors.dart';
 import 'package:roomfind/res/styles.dart';
 import 'package:roomfind/ui/login/log_in.dart';
-import 'package:roomfind/ui/login/log_in_page.dart';
 import 'package:roomfind/utils/size_config.dart';
 import 'package:roomfind/res/strings.dart';
 import '../search_result/search_results_form.dart';
 
 class MainForm extends StatelessWidget {
-
-
-
-  void showAlertDialod(BuildContext){
-    showDialog(
-      //context: context,
-      builder: (BuildContext){
-        return Dialog(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.horizontal(
-              left: const Radius.circular(0.0),
-              right: const Radius.circular(0.0),
-            ),
-          ),
-          elevation: 0,
-          child: LogIn(),
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +55,7 @@ class MainForm extends StatelessWidget {
               FlatButton(
                 minWidth: 20,
                 textColor: ApplicationColors.blue,
-                onPressed: () {showAlertDialod(context);},
+                onPressed: () {Navigator.pushNamed(context,  '/log_in_page');},
                 shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
                 child: Row(
                   children: [
