@@ -101,7 +101,7 @@ class HeadForm extends StatelessWidget {
 
                 padding: EdgeInsets.only(
                   top: SizeConfig.blockSizeVertical * 5,
-                  right: SizeConfig.blockSizeHorizontal * 15,
+                  right: SizeConfig.blockSizeHorizontal * 9,
                 ),
                 child: TextField(
                   style: Styles.robotoW300Px12,
@@ -140,7 +140,7 @@ class HeadForm extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.centerRight,
-                    color: Colors.yellow,
+
                     margin: EdgeInsets.only(
                         //left: SizeConfig.blockSizeHorizontal * 56,
                         top: SizeConfig.blockSizeVertical * 6.3),
@@ -165,7 +165,7 @@ class HeadForm extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    color: Colors.blue,
+
                     margin: EdgeInsets.only(
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(

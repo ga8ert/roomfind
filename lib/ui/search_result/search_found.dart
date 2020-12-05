@@ -18,7 +18,7 @@ class SearchFound extends StatelessWidget {
                 width: SizeConfig.blockSizeHorizontal * 67,
                 alignment: Alignment.topCenter,
                 child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
+                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     alignment: Alignment.topLeft,
@@ -28,23 +28,28 @@ class SearchFound extends StatelessWidget {
                   ),
                   SizedBox(height: SizeConfig.blockSizeVertical * 3.3),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(ApplicationTexts.textPhone,
                         style: Styles.robotoW800Px14,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 10.1,),
+                      Spacer(flex: 1),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 10.1,),
                       Text(ApplicationTexts.textCity,
                         style: Styles.robotoW800Px14,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal *6.5,),
+                      Spacer(flex: 1),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal *6.5,),
                       Text(ApplicationTexts.textStreet,
                         style: Styles.robotoW800Px14,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 17.6,),
+                      Spacer(flex: 1),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 17.6,),
                       Text(ApplicationTexts.textName,
                         style: Styles.robotoW800Px14,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 18.6,),
+                      Spacer(flex: 1),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 18.6,),
                       Text(ApplicationTexts.textRating,
                         style: Styles.robotoW800Px14,
                       ),
@@ -57,25 +62,30 @@ class SearchFound extends StatelessWidget {
                       ),
                   SizedBox(height: SizeConfig.blockSizeVertical* 1.54,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset('assets/icon/ionic-md-arrow-dropdown.png'),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.55),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 0.55),
                       Text(ApplicationTexts.textPhoneNumber,
                         style: Styles.robotoW800Px16,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 5.4,),
+                      Spacer(flex: 8),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 5.4,),
                       Text(ApplicationTexts.textCityName,
                         style: Styles.robotoW800Px16,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 5.5,),
+                      Spacer(flex: 11),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 5.5,),
                       Text(ApplicationTexts.textStreetName,
                         style: Styles.robotoW800Px16,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 9.7,),
+                      Spacer(flex: 5),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 9.7,),
                       Text(ApplicationTexts.textFullName,
                         style: Styles.robotoW800Px16,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 16.7,),
+                      Spacer(flex: 11),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 16.7,),
                       Icon(
                         Icons.star,
                         color: ApplicationColors.blue,
@@ -92,13 +102,15 @@ class SearchFound extends StatelessWidget {
                     thickness: 0.3,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
                       Icon(
                         Icons.account_circle,
                         color: ApplicationColors.blue,
                         size: 40.0,
                       ),
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8),
+                      //SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8),
                       Container(
                         width: SizeConfig.blockSizeHorizontal * 16.2,
                         child: TextField(
@@ -132,8 +144,6 @@ class SearchFound extends StatelessWidget {
                           ),
                         ),
                       ),// TextField for City
-
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8),
                       Container(
                         width: SizeConfig.blockSizeHorizontal * 19.8,
                         child: TextField(
@@ -167,9 +177,8 @@ class SearchFound extends StatelessWidget {
                           ),
                         ),
                       ),// TextField for Street
-
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8),
                       Container(
+                        alignment: Alignment.topLeft,
                         width: SizeConfig.blockSizeHorizontal * 14.5,
                         height: 56,
                         decoration: BoxDecoration(
@@ -183,8 +192,9 @@ class SearchFound extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.only(top:10, left: 20,),
-                              child: Row(
+
+                              margin: EdgeInsets.only(top:10, left: 27,),
+                              child: Wrap(
                                 children: [
                                   Text(ApplicationTexts.textPhotoPassport,
                                   style: Styles.robotoW300Px12,
@@ -193,8 +203,9 @@ class SearchFound extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(top:1, left: 20,),
-                              child: Row(
+
+                              margin: EdgeInsets.only(top:1,),
+                              child: Wrap(
                                 children: [
                                   Text(ApplicationTexts.textSelectFile,
                                     style: Styles.robotoW900Px16,
@@ -207,8 +218,6 @@ class SearchFound extends StatelessWidget {
                           ],
                         ),
                       ),// Container for Passport
-
-                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8),
                       Container(
                         width: SizeConfig.blockSizeHorizontal * 11,
                         child: TextField(
@@ -347,7 +356,7 @@ class SearchFound extends StatelessWidget {
                              child: Column(
                                crossAxisAlignment: CrossAxisAlignment.start,
                                children: [
-                                 Row(
+                                 Wrap(
                                    children: [
                                      Text(ApplicationTexts.text1,
                                        style: Styles.robotoW300Px18,
@@ -360,13 +369,15 @@ class SearchFound extends StatelessWidget {
                                  ),
                                  SizedBox(height: SizeConfig.blockSizeVertical * 3,),
                                  Row(
+                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                    children: [
                                      Icon(
                                        Icons.account_circle,
                                        color: ApplicationColors.blue,
                                        size: 40.0,
                                      ),
-                                     SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8,),
+                                     Spacer(flex: 1,),
+                                     //SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8,),
                                      Column(
                                        crossAxisAlignment: CrossAxisAlignment.start,
                                        children: [
@@ -386,7 +397,8 @@ class SearchFound extends StatelessWidget {
                                          ),
                                        ],
                                      ),
-                                     SizedBox(width: SizeConfig.blockSizeHorizontal * 51.3,),
+                                     Spacer(flex: 75,),
+                                     //SizedBox(width: SizeConfig.blockSizeHorizontal * 51.3,),
                                      Row(
                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                        children: [
@@ -419,7 +431,7 @@ class SearchFound extends StatelessWidget {
                              child: Column(
                                crossAxisAlignment: CrossAxisAlignment.start,
                                children: [
-                                 Row(
+                                 Wrap(
                                    children: [
                                      Text(ApplicationTexts.text1,
                                        style: Styles.robotoW300Px18,
@@ -432,13 +444,15 @@ class SearchFound extends StatelessWidget {
                                  ),
                                  SizedBox(height: SizeConfig.blockSizeVertical * 3,),
                                  Row(
+                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                    children: [
                                      Icon(
                                        Icons.account_circle,
                                        color: ApplicationColors.blue,
                                        size: 40.0,
                                      ),
-                                     SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8,),
+                                     Spacer(flex: 1,),
+                                     //SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8,),
                                      Column(
                                        crossAxisAlignment: CrossAxisAlignment.start,
                                        children: [
@@ -458,7 +472,8 @@ class SearchFound extends StatelessWidget {
                                          ),
                                        ],
                                      ),
-                                     SizedBox(width: SizeConfig.blockSizeHorizontal * 51.3,),
+                                     Spacer(flex: 75,),
+                                     //SizedBox(width: SizeConfig.blockSizeHorizontal * 51.3,),
                                      Row(
                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                        children: [
@@ -491,7 +506,7 @@ class SearchFound extends StatelessWidget {
                              child: Column(
                                crossAxisAlignment: CrossAxisAlignment.start,
                                children: [
-                                 Row(
+                                 Wrap(
                                    children: [
                                      Text(ApplicationTexts.text1,
                                        style: Styles.robotoW300Px18,
@@ -504,13 +519,15 @@ class SearchFound extends StatelessWidget {
                                  ),
                                  SizedBox(height: SizeConfig.blockSizeVertical * 3,),
                                  Row(
+                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                    children: [
                                      Icon(
                                        Icons.account_circle,
                                        color: ApplicationColors.blue,
                                        size: 40.0,
                                      ),
-                                     SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8,),
+                                     Spacer(flex: 1,),
+                                     //SizedBox(width: SizeConfig.blockSizeHorizontal * 0.8,),
                                      Column(
                                        crossAxisAlignment: CrossAxisAlignment.start,
                                        children: [
@@ -530,7 +547,8 @@ class SearchFound extends StatelessWidget {
                                          ),
                                        ],
                                      ),
-                                     SizedBox(width: SizeConfig.blockSizeHorizontal * 51.3,),
+                                     Spacer(flex: 75,),
+                                     //SizedBox(width: SizeConfig.blockSizeHorizontal * 51.3,),
                                      Row(
                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                        children: [
@@ -558,6 +576,7 @@ class SearchFound extends StatelessWidget {
                                ],
                              ),
                            ),
+                           SizedBox(height: SizeConfig.blockSizeVertical * 3),
                          ],
                        )
                    ),
