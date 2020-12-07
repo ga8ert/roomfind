@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:roomfind/res/colors.dart';
 import 'package:roomfind/res/styles.dart';
-import 'package:roomfind/ui/login/log_in.dart';
 import 'package:roomfind/utils/size_config.dart';
 import 'package:roomfind/res/strings.dart';
-import '../search_result/search_results_form.dart';
+
+
+class LargeMainForm extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: MainForm(),
+    );
+  }
+}
+
 
 class MainForm extends StatelessWidget {
 
