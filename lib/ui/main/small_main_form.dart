@@ -32,17 +32,12 @@ class SmallMain extends StatelessWidget {
                   },
                   color:  Color(0xFFf5fafd),
                   padding: EdgeInsets.only(
-                      top: SizeConfig.blockSizeVertical * 2.2,
+                      top: SizeConfig.blockSizeVertical * 2.4,
                       //left: SizeConfig.blockSizeHorizontal * 1.20,
                       bottom: SizeConfig.blockSizeVertical * 2.2,
                       //right: SizeConfig.blockSizeHorizontal * 1.20
                       ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.horizontal(
-                      left: const Radius.circular(100.0),
-                      right: const Radius.circular(100.0),
-                    ),
-                  ),
+                  shape: CircleBorder(),
 
                   child: Row(
                     children: [

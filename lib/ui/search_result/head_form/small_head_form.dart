@@ -5,7 +5,7 @@ import 'package:roomfind/res/strings.dart';
 import 'package:roomfind/res/styles.dart';
 import 'package:roomfind/utils/size_config.dart';
 
-class HeadForm extends StatelessWidget {
+class SmallHeadForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,92 +16,85 @@ class HeadForm extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                      top: SizeConfig.safeBlockVertical * 6,
+              Container(
+
+                margin: EdgeInsets.only(
+                  top: SizeConfig.safeBlockVertical * 6,
+                ),
+                //height: SizeConfig.safeBlockVertical * 13,
+                //width: SizeConfig.blockSizeHorizontal * 9.5,
+                child: Wrap(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top:12.0),
+                      child: Text(ApplicationTexts.textLogotype,
+                          style: Styles.robotoW100Px9),
                     ),
-                    height: SizeConfig.safeBlockVertical * 13,
-                    width: SizeConfig.blockSizeHorizontal * 9.5,
-                    child: Wrap(
-                      children: [
-                        Text(ApplicationTexts.textLogotype,
-                            style: Styles.robotoW100Px30),
-                      ],
-                    ),
-                  ), //Logotype
+                  ],
+                ),
+              ), //Logotype
 
               Container(
-                    padding:
-                    EdgeInsets.only(top: SizeConfig.safeBlockVertical * 3),
-                    child: RaisedButton(
-                      onPressed: () {
-                      },
-                      color: Color(0xFFf5fafd),
-                      padding: EdgeInsets.only(
-                          top: SizeConfig.blockSizeVertical * 2.2,
-                          left: SizeConfig.blockSizeHorizontal * 1.20,
-                          bottom: SizeConfig.blockSizeVertical * 2.2,
-                          right: SizeConfig.blockSizeHorizontal * 1.20,
+
+                margin:
+                EdgeInsets.only(top: SizeConfig.safeBlockVertical * 8),
+                child: RaisedButton(
+                  onPressed: () {
+                  },
+                  color: Color(0xFFf5fafd),
+                  shape: CircleBorder(),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.download_rounded,
+                        color: ApplicationColors.blue,
+                        size: 15.0,
                       ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: const Radius.circular(100.0),
-                          right: const Radius.circular(100.0),
+                    ],
+                  ),
+                ),
+              ),//Договір на оренду
+
+
+              Container(
+                margin:
+                EdgeInsets.only(top: SizeConfig.safeBlockVertical * 7 ),
+                child: FlatButton(
+                  minWidth: SizeConfig.blockSizeHorizontal * 1.2,
+                  textColor: ApplicationColors.blue,
+                  onPressed: () {},
+                  shape: CircleBorder(
+                      side: BorderSide(color: Colors.transparent)),
+                  child: Wrap(
+                    children: [
+                      Icon(
+                        Icons.account_circle_sharp,
+                        color: ApplicationColors.blue,
+                        size: 16.0,
+                      ),
+                      SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
+                      Padding(
+                        padding: const EdgeInsets.only(top:1.0),
+                        child: Flexible(
+                          child: Text(
+                            ApplicationTexts.textHelloUserName,
+                            style: Styles.robotoW800Px12b,
+                          ),
                         ),
                       ),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.download_rounded,
-                            color: ApplicationColors.blue,
-                            size: 20.0,
-                          ),
-                          SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
-                          Text(
-                            ApplicationTexts.textRentDoc,
-                            style: Styles.robotoW300Px16,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),//Договір на оренду
-              //Spacer(flex: 7),
-
-                  Container(
-                    padding:
-                    EdgeInsets.only(top: SizeConfig.safeBlockVertical * 3),
-                    child: FlatButton(
-                      minWidth: SizeConfig.blockSizeHorizontal * 1.2,
-                      textColor: ApplicationColors.blue,
-                      onPressed: () {},
-                      shape: CircleBorder(
-                          side: BorderSide(color: Colors.transparent)),
-                      child: Wrap(
-                        children: [
-                          Icon(
-                            Icons.account_circle_sharp,
-                            color: ApplicationColors.blue,
-                            size: 30.0,
-                          ),
-                          SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4),
-                          Text(
-                            ApplicationTexts.textHelloUserName,
-                            style: Styles.robotoW800Px16,
-                          ),
-                        ],
-                      ),
-                    ),
+                    ],
                   ),
-                ],
-              ), //UserName
+                ),
+              ),
+            ],
+          ), //UserName
 
           Stack(
             children: [
               Container(
-
                 padding: EdgeInsets.only(
                   top: SizeConfig.blockSizeVertical * 5,
-                  right: SizeConfig.blockSizeHorizontal * 9,
+                  right: SizeConfig.blockSizeHorizontal * 15,
                 ),
                 child: TextField(
                   style: Styles.robotoW300Px12,
@@ -142,7 +135,7 @@ class HeadForm extends StatelessWidget {
                     alignment: Alignment.centerRight,
 
                     margin: EdgeInsets.only(
-                        //left: SizeConfig.blockSizeHorizontal * 56,
+                      left: SizeConfig.blockSizeHorizontal * 30,
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(
                       onPressed: () {},
@@ -158,7 +151,7 @@ class HeadForm extends StatelessWidget {
                           Icon(
                             Icons.close,
                             color: Color(0xFF000000),
-                            size: 24.0,
+                            size: 16.0,
                           ),
                         ],
                       ),
@@ -169,7 +162,7 @@ class HeadForm extends StatelessWidget {
                     margin: EdgeInsets.only(
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(
-                      minWidth: 20,
+                      minWidth: 14,
                       textColor: ApplicationColors.blue,
                       onPressed: () {},
                       shape: CircleBorder(
@@ -179,11 +172,11 @@ class HeadForm extends StatelessWidget {
                           Icon(
                             Icons.search_sharp,
                             color: ApplicationColors.blue,
-                            size: 20.0,
+                            size: 14.0,
                           ),
                           SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
                           Text(ApplicationTexts.textSearch,
-                              style: Styles.robotoW800Px16),
+                              style: Styles.robotoW800Px12b),
                         ],
                       ),
                     ),
