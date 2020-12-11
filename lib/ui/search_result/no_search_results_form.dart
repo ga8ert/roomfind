@@ -8,11 +8,13 @@ class NoSearchResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          SelectHeadForm(),
-          NoSearch(),
-        ],
+      body: Container(
+        child: Column(
+          children: [
+            SelectHeadForm(),
+            NoSearch(),
+          ],
+        ),
       ),
     );
   }

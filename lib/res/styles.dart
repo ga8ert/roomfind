@@ -99,9 +99,9 @@ class Styles {
 
 
 
-  static TextStyle robotoW900Px36 = TextStyle(
+  static TextStyle robotoW900Px30 = TextStyle(
     color: Color(0xFF999999),
-    fontSize: 36,
+    fontSize: 30,
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w900,
   );

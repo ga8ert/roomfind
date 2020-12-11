@@ -36,7 +36,7 @@ class MediumHeadForm extends StatelessWidget {
                 child: RaisedButton(
                   onPressed: () {
                   },
-                  color: Color(0xFFf5fafd),
+                  color: ApplicationColors.light_blue,
                   padding: EdgeInsets.only(
                     top: SizeConfig.blockSizeVertical * 2.2,
                     left: SizeConfig.blockSizeHorizontal * 1.20,
@@ -156,7 +156,7 @@ class MediumHeadForm extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.close,
-                            color: Color(0xFF000000),
+                            color: ApplicationColors.black,
                             size: 24.0,
                           ),
                         ],

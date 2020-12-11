@@ -41,7 +41,7 @@ class SmallHeadForm extends StatelessWidget {
                 child: RaisedButton(
                   onPressed: () {
                   },
-                  color: Color(0xFFf5fafd),
+                  color: ApplicationColors.light_blue,
                   shape: CircleBorder(),
                   child: Row(
                     children: [
@@ -133,7 +133,6 @@ class SmallHeadForm extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.centerRight,
-
                     margin: EdgeInsets.only(
                       left: SizeConfig.blockSizeHorizontal * 30,
                         top: SizeConfig.blockSizeVertical * 6.3),
@@ -150,8 +149,8 @@ class SmallHeadForm extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.close,
-                            color: Color(0xFF000000),
-                            size: 16.0,
+                            color: ApplicationColors.black,
+                            size: 14.0,
                           ),
                         ],
                       ),
@@ -172,7 +171,7 @@ class SmallHeadForm extends StatelessWidget {
                           Icon(
                             Icons.search_sharp,
                             color: ApplicationColors.blue,
-                            size: 14.0,
+                            size: 12.0,
                           ),
                           SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
                           Text(ApplicationTexts.textSearch,

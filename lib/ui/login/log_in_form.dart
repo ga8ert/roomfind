@@ -13,12 +13,11 @@ Widget build(BuildContext context){
     return Dialog(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.horizontal(
-            left: const Radius.circular(0.0),
-            right: const Radius.circular(0.0),
+            left: const Radius.circular(50.0),
+            right: const Radius.circular(50.0),
           ),
         ),
         elevation: 0,
-        // backgroundColor: Colors.transparent,
         child: contentBox(context),
     );
   }
@@ -28,16 +27,16 @@ Widget build(BuildContext context){
         width:  SizeConfig.blockSizeHorizontal * 26.2,
         decoration: BoxDecoration(
           border: Border.all(
-            color: Color(0xFFE2E2E2),
+            color: ApplicationColors.white,
           ),
-          color: Color(0xFFFFFFFF),
+          color: ApplicationColors.fullwhite,
           borderRadius: BorderRadius.horizontal(
             left: const Radius.circular(5.0),
             right: const Radius.circular(5.0),
           ),
           boxShadow: [
             BoxShadow(
-              color: Color(0x0000001A).withOpacity(0.1),
+              color: ApplicationColors.silver.withOpacity(0.1),
               spreadRadius: 1,
               blurRadius: 30,
               offset: Offset(0, 0), // changes position of shadow

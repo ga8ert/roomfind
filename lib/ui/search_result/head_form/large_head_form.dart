@@ -35,7 +35,7 @@ class LargeHeadForm extends StatelessWidget {
                     child: RaisedButton(
                       onPressed: () {
                       },
-                      color: Color(0xFFf5fafd),
+                      color: ApplicationColors.light_blue,
                       padding: EdgeInsets.only(
                           top: SizeConfig.blockSizeVertical * 2.2,
                           left: SizeConfig.blockSizeHorizontal * 1.20,
@@ -144,7 +144,6 @@ class LargeHeadForm extends StatelessWidget {
                     alignment: Alignment.centerRight,
 
                     margin: EdgeInsets.only(
-                        //left: SizeConfig.blockSizeHorizontal * 56,
                         top: SizeConfig.blockSizeVertical * 6.3),
                     child: FlatButton(
                       onPressed: () {},
@@ -159,7 +158,7 @@ class LargeHeadForm extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.close,
-                            color: Color(0xFF000000),
+                            color: ApplicationColors.black,
                             size: 24.0,
                           ),
                         ],

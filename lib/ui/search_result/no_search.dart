@@ -8,6 +8,7 @@ class NoSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       child: Column(
         children: [
 
@@ -15,14 +16,13 @@ class NoSearch extends StatelessWidget {
             heightFactor: 2,
             widthFactor: 2,
             child: Text(ApplicationTexts.textNothingFound,
-                style: Styles.robotoW900Px36),
+                style: Styles.robotoW900Px30),
           ),
            Row(
              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   padding: EdgeInsets.only(
-                      //left: SizeConfig.blockSizeHorizontal * 41,
                       top: SizeConfig.blockSizeVertical * 3),
                   child: FlatButton(
                     onPressed: () {
@@ -32,7 +32,7 @@ class NoSearch extends StatelessWidget {
                       vertical: SizeConfig.blockSizeVertical * 2.4,
                       horizontal: SizeConfig.blockSizeHorizontal * 3,
                     ),
-                    color: Colors.white,
+                    color: ApplicationColors.fullwhite,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.horizontal(
                         left: const Radius.circular(100.0),

@@ -327,7 +327,7 @@ class SearchFound extends StatelessWidget {
                             children: [
                               Icon(
                                 Icons.upload_file,
-                                color: Colors.white,
+                                color: ApplicationColors.fullwhite,
                                 size: 20.0,
                               ),
 

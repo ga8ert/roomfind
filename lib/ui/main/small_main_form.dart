@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:roomfind/res/colors.dart';
 import 'package:roomfind/res/styles.dart';
+import 'package:roomfind/ui/login/log_in_form.dart';
 import 'package:roomfind/utils/size_config.dart';
 import 'package:roomfind/res/strings.dart';
 
@@ -30,7 +31,7 @@ class SmallMain extends StatelessWidget {
               RaisedButton(
                   onPressed: () {
                   },
-                  color:  Color(0xFFf5fafd),
+                  color:  ApplicationColors.light_blue,
                   padding: EdgeInsets.only(
                       top: SizeConfig.blockSizeVertical * 2.4,
                       //left: SizeConfig.blockSizeHorizontal * 1.20,
@@ -50,14 +51,15 @@ class SmallMain extends StatelessWidget {
                   )
               ),
 
-              // SizedBox(
-              //   width: SizeConfig.blockSizeHorizontal * 10,
-              // ),
-
               FlatButton(
                 minWidth: 20,
                 textColor: ApplicationColors.blue,
-                onPressed: () {Navigator.pushNamed(context,  '/log_in_page');},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) => LogInForm(),
+                  );
+                },
                 shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
                 child: Row(
                   children: [
