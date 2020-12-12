@@ -6,7 +6,7 @@ import 'package:roomfind/utils/size_config.dart';
 
 
 
-class SearchFound extends StatelessWidget {
+class LargeSearchFoundForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

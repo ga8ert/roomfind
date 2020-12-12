@@ -5,7 +5,6 @@ import 'package:roomfind/res/strings.dart';
 import 'package:roomfind/res/styles.dart';
 import 'package:roomfind/utils/size_config.dart';
 
-
 class LogInForm extends StatelessWidget {
 @override
 Widget build(BuildContext context){

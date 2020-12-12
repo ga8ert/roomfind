@@ -9,7 +9,7 @@ class SmallHeadForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: SizeConfig.blockSizeHorizontal * 67,
+      width: SizeConfig.blockSizeHorizontal * 90,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -33,7 +33,6 @@ class SmallHeadForm extends StatelessWidget {
                   ],
                 ),
               ), //Logotype
-
               Container(
 
                 margin:
@@ -54,8 +53,6 @@ class SmallHeadForm extends StatelessWidget {
                   ),
                 ),
               ),//Договір на оренду
-
-
               Container(
                 margin:
                 EdgeInsets.only(top: SizeConfig.safeBlockVertical * 7 ),
@@ -94,7 +91,7 @@ class SmallHeadForm extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(
                   top: SizeConfig.blockSizeVertical * 5,
-                  right: SizeConfig.blockSizeHorizontal * 15,
+                  right: SizeConfig.blockSizeHorizontal *22,
                 ),
                 child: TextField(
                   style: Styles.robotoW300Px12,
@@ -128,59 +125,62 @@ class SmallHeadForm extends StatelessWidget {
                 ),
               ),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    alignment: Alignment.centerRight,
-                    margin: EdgeInsets.only(
-                      left: SizeConfig.blockSizeHorizontal * 30,
-                        top: SizeConfig.blockSizeVertical * 6.3),
-                    child: FlatButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.only(
-                        top: SizeConfig.blockSizeVertical * 0.1,
-                        left: SizeConfig.blockSizeHorizontal * 0.1,
-                      ),
-                      color: Colors.transparent,
-                      shape: CircleBorder(
-                          side: BorderSide(color: Colors.transparent)),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.close,
-                            color: ApplicationColors.black,
-                            size: 14.0,
-                          ),
-                        ],
+              Padding(
+                padding:  EdgeInsets.only(top: SizeConfig.safeBlockVertical * 5.7),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      //alignment: Alignment.centerRight,
+                      // margin: EdgeInsets.only(
+                      //   left: SizeConfig.blockSizeHorizontal * 42,
+                      //     top: SizeConfig.blockSizeVertical * 5.8),
+                      child: FlatButton(
+                        onPressed: () {},
+                        padding: EdgeInsets.only(
+                          top: SizeConfig.blockSizeVertical * 0.1,
+                          left: SizeConfig.blockSizeHorizontal * 0.1,
+                        ),
+                        color: Colors.transparent,
+                        shape: CircleBorder(
+                            side: BorderSide(color: Colors.transparent)),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.close,
+                              color: ApplicationColors.black,
+                              size: 14.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
+                    Container(
 
-                    margin: EdgeInsets.only(
-                        top: SizeConfig.blockSizeVertical * 6.3),
-                    child: FlatButton(
-                      minWidth: 14,
-                      textColor: ApplicationColors.blue,
-                      onPressed: () {},
-                      shape: CircleBorder(
-                          side: BorderSide(color: Colors.transparent)),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.search_sharp,
-                            color: ApplicationColors.blue,
-                            size: 12.0,
-                          ),
-                          SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
-                          Text(ApplicationTexts.textSearch,
-                              style: Styles.robotoW800Px12b),
-                        ],
+                      // margin: EdgeInsets.only(
+                      //     top: SizeConfig.blockSizeVertical * 5.5),
+                      child: FlatButton(
+                        minWidth: 14,
+                        textColor: ApplicationColors.blue,
+                        onPressed: () {},
+                        shape: CircleBorder(
+                            side: BorderSide(color: Colors.transparent)),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.search_sharp,
+                              color: ApplicationColors.blue,
+                              size: 12.0,
+                            ),
+                            SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
+                            Text(ApplicationTexts.textSearch,
+                                style: Styles.robotoW800Px12b),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

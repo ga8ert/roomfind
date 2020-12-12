@@ -2,6 +2,13 @@ import 'package:flutter/widgets.dart';
 import 'package:roomfind/res/colors.dart';
 
 class Styles {
+
+  static TextStyle robotoW300Px10 = TextStyle(
+    fontSize: 10,
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w300,
+  );
+
   static TextStyle robotoW300Px12 = TextStyle(
     fontSize: 12,
     fontFamily: 'Roboto',
@@ -41,10 +48,45 @@ class Styles {
     fontWeight: FontWeight.w300,
   );
 
+  static TextStyle robotoW500Px12 = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w500,
+    color: ApplicationColors.grey,
+    fontSize: 12,
+  );
+
   static TextStyle robotoW500Px14 = TextStyle(
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w500,
     color: ApplicationColors.grey,
+    fontSize: 14,
+  );
+
+  static TextStyle robotoW800Px10= TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w800,
+    color: ApplicationColors.black,
+    fontSize: 10,
+  );
+
+  static TextStyle robotoW800Px12= TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w800,
+    color: ApplicationColors.black,
+    fontSize: 12,
+  );
+
+  static TextStyle robotoW800Px12g = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w800,
+    color: ApplicationColors.grey,
+    fontSize: 12,
+  );
+
+  static TextStyle robotoW800Px14b = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w800,
+    color: ApplicationColors.full_black,
     fontSize: 14,
   );
 
@@ -54,6 +96,8 @@ class Styles {
     color: ApplicationColors.grey,
     fontSize: 14,
   );
+
+
 
   static TextStyle robotoW800Px16 = TextStyle(
     fontSize: 16,
@@ -80,6 +124,22 @@ class Styles {
     fontFamily: 'Roboto',
     color: Color(0xFFFFFFFF),
     fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle robotoW900Px12b = TextStyle(
+    decoration: TextDecoration.underline,
+    color: Color(0xFF000000),
+    fontSize: 12,
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w900,
+  );
+
+  static TextStyle robotoW900Px12 = TextStyle(
+    decoration: TextDecoration.underline,
+    color: Color(0xFF3299D1),
+    fontSize: 12,
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w900,
   );
 
   static TextStyle robotoW900Px16 = TextStyle(

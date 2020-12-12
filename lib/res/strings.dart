@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 
 class ApplicationTexts {
   static const String textLogotype = "LOGOTYPE";
