@@ -197,7 +197,7 @@ class LargeSearchFoundForm extends StatelessWidget {
                               child: Wrap(
                                 children: [
                                   Text(ApplicationTexts.textPhotoPassport,
-                                  style: Styles.robotoW300Px12,
+                                  style: Styles.robotoW300Px10,
                                   ),
                                 ],
                               ),
@@ -208,7 +208,7 @@ class LargeSearchFoundForm extends StatelessWidget {
                               child: Wrap(
                                 children: [
                                   Text(ApplicationTexts.textSelectFile,
-                                    style: Styles.robotoW900Px16,
+                                    style: Styles.robotoW900Px12,
                                   ),
 
                                 ],

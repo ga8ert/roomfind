@@ -64,7 +64,6 @@ class LargeHeadForm extends StatelessWidget {
                       ),
                     ),
                   ),//Договір на оренду
-              //Spacer(flex: 7),
 
                   Container(
                     padding:
@@ -97,42 +96,42 @@ class LargeHeadForm extends StatelessWidget {
                 ],
               ), //UserName
 
-          Stack(
+          Row(
             children: [
-              Container(
-
-                padding: EdgeInsets.only(
-                  top: SizeConfig.blockSizeVertical * 5,
-                  right: SizeConfig.blockSizeHorizontal * 9,
-                ),
-                child: TextField(
-                  style: Styles.robotoW300Px12,
-                  decoration: InputDecoration(
-                    labelText: ApplicationTexts.textPhoneOrAddress,
-                    labelStyle: Styles.robotoW300Px12,
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: ApplicationColors.white,
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.only(
+                    top: SizeConfig.blockSizeVertical * 5,
+                  ),
+                  child: TextField(
+                    style: Styles.robotoW300Px12,
+                    decoration: InputDecoration(
+                      labelText: ApplicationTexts.textPhoneOrAddress,
+                      labelStyle: Styles.robotoW300Px12,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: ApplicationColors.white,
+                        ),
+                        borderRadius: BorderRadius.horizontal(
+                          left: const Radius.circular(100.0),
+                          right: const Radius.circular(100.0),
+                        ),
                       ),
-                      borderRadius: BorderRadius.horizontal(
-                        left: const Radius.circular(100.0),
-                        right: const Radius.circular(100.0),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: ApplicationColors.white,
+                        ),
+                        borderRadius: BorderRadius.horizontal(
+                          left: const Radius.circular(100.0),
+                          right: const Radius.circular(100.0),
+                        ),
                       ),
+                      hintText: ApplicationTexts.textEnterPhoneOrAddress,
+                      hintStyle: Styles.robotoW300Px12,
+                      isDense: true,
+                      contentPadding:
+                      EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical * 2.7, horizontal: SizeConfig.blockSizeVertical * 3),
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: ApplicationColors.white,
-                      ),
-                      borderRadius: BorderRadius.horizontal(
-                        left: const Radius.circular(100.0),
-                        right: const Radius.circular(100.0),
-                      ),
-                    ),
-                    hintText: ApplicationTexts.textEnterPhoneOrAddress,
-                    hintStyle: Styles.robotoW300Px12,
-                    isDense: true,
-                    contentPadding:
-                    EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical * 2.7, horizontal: SizeConfig.blockSizeVertical * 3),
                   ),
                 ),
               ),
@@ -140,57 +139,49 @@ class LargeHeadForm extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  SizedBox(
+                    width: SizeConfig.blockSizeHorizontal*0.5,
+                  ),
                   Container(
-                    alignment: Alignment.centerRight,
-
                     margin: EdgeInsets.only(
-                        top: SizeConfig.blockSizeVertical * 6.3),
-                    child: FlatButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.only(
-                        top: SizeConfig.blockSizeVertical * 0.1,
-                        left: SizeConfig.blockSizeHorizontal * 0.1,
-                      ),
-                      color: Colors.transparent,
-                      shape: CircleBorder(
-                          side: BorderSide(color: Colors.transparent)),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.close,
-                            color: ApplicationColors.black,
-                            size: 24.0,
-                          ),
-                        ],
+                      top: SizeConfig.blockSizeVertical * 4.5,
+                    ),
+                    child: GestureDetector(
+                      onTap: (){},
+                      child: Icon(
+                        Icons.close,
+                        color: ApplicationColors.black,
+                        size: 20.0,
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: SizeConfig.blockSizeHorizontal*1,
+                  ),
                   Container(
-
                     margin: EdgeInsets.only(
-                        top: SizeConfig.blockSizeVertical * 6.3),
-                    child: FlatButton(
-                      minWidth: 20,
-                      textColor: ApplicationColors.blue,
-                      onPressed: () {},
-                      shape: CircleBorder(
-                          side: BorderSide(color: Colors.transparent)),
+                      top: SizeConfig.blockSizeVertical * 4.5,
+                    ),
+                    child: GestureDetector(
+                      onTap: (){},
                       child: Row(
                         children: [
                           Icon(
                             Icons.search_sharp,
                             color: ApplicationColors.blue,
-                            size: 20.0,
+                            size: 16.0,
                           ),
                           SizedBox(width: SizeConfig.blockSizeHorizontal * 0.4,),
                           Text(ApplicationTexts.textSearch,
-                              style: Styles.robotoW800Px16),
+                              style: Styles.robotoW800Px16b),
                         ],
                       ),
                     ),
                   ),
+
                 ],
               ),
+
             ],
           ),
           const Divider(

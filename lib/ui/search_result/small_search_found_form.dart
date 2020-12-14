@@ -11,7 +11,7 @@ class SmallSearchFoundForm extends StatelessWidget {
       child: Center(
           child: Container(
             alignment: Alignment.center,
-            height: SizeConfig.blockSizeVertical * 60,
+            height: SizeConfig.blockSizeVertical * 66,
             width: SizeConfig.blockSizeHorizontal * 67,
             child: ListView(
               scrollDirection: Axis.vertical,

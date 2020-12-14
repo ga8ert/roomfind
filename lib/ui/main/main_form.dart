@@ -92,57 +92,65 @@ class MainForm extends StatelessWidget {
           ),
         ),
 
-        Center(
-          child: Container(
-            margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 20),
-           height: SizeConfig.safeBlockVertical * 13,
-           width: SizeConfig.safeBlockHorizontal * 100,
-            child: Column(
-              children:[
-                Text(ApplicationTexts.textLogotype,
-                style: Styles.robotoW100Px55,
-              ),
-            ],
-          ),
-      ),
-        ),
-        Stack(
-          children:[
-            Container(
-            padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockSizeHorizontal * 20),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             Container(
 
-            child: TextField(
-              style: Styles.robotoW300Px12,
-              decoration: InputDecoration(
-                labelText: ApplicationTexts.textPhoneOrAddress,
-                labelStyle: Styles.robotoW300Px12,
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: ApplicationColors.white,
+                margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 20),
+               height: SizeConfig.safeBlockVertical * 13,
+               width: SizeConfig.safeBlockHorizontal * 100,
+                child: Column(
+                  children:[
+                    Text(ApplicationTexts.textLogotype,
+                    style: Styles.robotoW100Px55,
                   ),
-                  borderRadius: BorderRadius.horizontal(
-                    left: const Radius.circular(100.0),
-                    right: const Radius.circular(100.0),
-                  ),
-
+                ],
               ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: ApplicationColors.white,
+             ),
+           ],
+         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child:
+                Container(
+                padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockSizeHorizontal * 20),
+
+                child: TextField(
+                  style: Styles.robotoW300Px12,
+                  decoration: InputDecoration(
+                    labelText: ApplicationTexts.textPhoneOrAddress,
+                    labelStyle: Styles.robotoW300Px12,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: ApplicationColors.white,
+                      ),
+                      borderRadius: BorderRadius.horizontal(
+                        left: const Radius.circular(100.0),
+                        right: const Radius.circular(100.0),
+                      ),
+
                   ),
-                  borderRadius: BorderRadius.horizontal(
-                    left: const Radius.circular(100.0),
-                    right: const Radius.circular(100.0),
-                  ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: ApplicationColors.white,
+                      ),
+                      borderRadius: BorderRadius.horizontal(
+                        left: const Radius.circular(100.0),
+                        right: const Radius.circular(100.0),
+                      ),
+                    ),
+                    hintText: ApplicationTexts.textEnterPhoneOrAddress,
+                    hintStyle: Styles.robotoW300Px12,
+                    isDense: true,
+                    contentPadding: EdgeInsets.symmetric(vertical: 25, horizontal: 27),
                 ),
-                hintText: ApplicationTexts.textEnterPhoneOrAddress,
-                hintStyle: Styles.robotoW300Px12,
-                isDense: true,
-                contentPadding: EdgeInsets.symmetric(vertical: 25, horizontal: 27),
+                ),
+                ),
             ),
-          ),
-      ),
-    ],
+          ],
         ),
 
         Container(

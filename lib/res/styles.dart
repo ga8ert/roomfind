@@ -127,7 +127,6 @@ class Styles {
   );
 
   static TextStyle robotoW900Px12b = TextStyle(
-    decoration: TextDecoration.underline,
     color: Color(0xFF000000),
     fontSize: 12,
     fontFamily: 'Roboto',
