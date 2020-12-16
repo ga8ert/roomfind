@@ -20,7 +20,7 @@ class SmallMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Column(
+    return ListView(
       children:[
         Center(
           heightFactor: 3,
@@ -85,8 +85,6 @@ class SmallMain extends StatelessWidget {
         Center(
           child: Container(
             margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 20),
-            height: SizeConfig.safeBlockVertical * 13,
-            width: SizeConfig.safeBlockHorizontal * 100,
             child: Column(
               children:[
                 Text(ApplicationTexts.textLogotype,
@@ -96,6 +94,7 @@ class SmallMain extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: SizeConfig.blockSizeVertical*8,),
         Stack(
           children:[
             Container(

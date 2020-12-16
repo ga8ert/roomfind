@@ -17,7 +17,7 @@ class LargeSearchFoundForm extends StatelessWidget {
                 height: SizeConfig.blockSizeVertical *65,
                 width: SizeConfig.blockSizeHorizontal * 67,
                 alignment: Alignment.topCenter,
-                child: Column(
+                child: ListView(
                   //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
@@ -56,7 +56,7 @@ class LargeSearchFoundForm extends StatelessWidget {
                     ],
                   ),
                   const Divider(
-                        color: Colors.grey,
+                    color: ApplicationColors.white,
                         height: 13,
                         thickness: 0.3,
                       ),
@@ -97,7 +97,7 @@ class LargeSearchFoundForm extends StatelessWidget {
                     ],
                   ),
                   const Divider(
-                    color: Colors.grey,
+                    color: ApplicationColors.white,
                     height: 40,
                     thickness: 0.3,
                   ),
@@ -342,15 +342,14 @@ class LargeSearchFoundForm extends StatelessWidget {
                     ],
                   ),
                   const Divider(
-                    color: Colors.grey,
+                    color: ApplicationColors.white,
                     height: 50,
                     thickness: 0.3,
                   ),
 
-                  Expanded(
-                    flex: 1000,
-                      child: ListView(
-                         scrollDirection: Axis.vertical,
+
+                       Column(
+                         //scrollDirection: Axis.vertical,
                          children: [
                            Container(
                              child: Column(
@@ -578,8 +577,8 @@ class LargeSearchFoundForm extends StatelessWidget {
                            ),
                            SizedBox(height: SizeConfig.blockSizeVertical * 3),
                          ],
-                       )
-                   ),
+                       ),
+
                 ],
             ),
           ),

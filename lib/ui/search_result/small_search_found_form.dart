@@ -42,7 +42,7 @@ class SmallSearchFoundForm extends StatelessWidget {
                             ],
                           ),
                           const Divider(
-                            color: Colors.grey,
+                            color: ApplicationColors.white,
                             height: 13,
                             thickness: 0.3,
                           ),
@@ -59,7 +59,7 @@ class SmallSearchFoundForm extends StatelessWidget {
                             ],
                           ),
                           const Divider(
-                            color: Colors.grey,
+                            color: ApplicationColors.white,
                             height: 13,
                             thickness: 0.3,
                           ),
@@ -75,7 +75,7 @@ class SmallSearchFoundForm extends StatelessWidget {
                             ],
                           ),
                           const Divider(
-                            color: Colors.grey,
+                            color: ApplicationColors.white,
                             height: 13,
                             thickness: 0.3,
                           ),
@@ -91,7 +91,7 @@ class SmallSearchFoundForm extends StatelessWidget {
                             ],
                           ),
                           const Divider(
-                            color: Colors.grey,
+                            color: ApplicationColors.white,
                             height: 13,
                             thickness: 0.3,
                           ),
@@ -113,7 +113,7 @@ class SmallSearchFoundForm extends StatelessWidget {
                             ],
                           ),
                           const Divider(
-                            color: Colors.grey,
+                            color: ApplicationColors.white,
                             height: 13,
                             thickness: 0.3,
                           ),
@@ -369,7 +369,7 @@ class SmallSearchFoundForm extends StatelessWidget {
                   ],
                 ),
                 const Divider(
-                  color: Colors.grey,
+                  color: ApplicationColors.white,
                   height: 30,
                   thickness: 0.3,
                   endIndent: 0,

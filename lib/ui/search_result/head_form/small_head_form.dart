@@ -173,7 +173,7 @@ class SmallHeadForm extends StatelessWidget {
               ),
 
           const Divider(
-            color: Colors.grey,
+            color: ApplicationColors.white,
             height: 50,
             thickness: 0.3,
             endIndent: 0,

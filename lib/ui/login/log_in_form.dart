@@ -5,8 +5,11 @@ import 'package:roomfind/res/strings.dart';
 import 'package:roomfind/res/styles.dart';
 import 'package:roomfind/utils/size_config.dart';
 
+
+
 class LogInForm extends StatelessWidget {
 @override
+
 Widget build(BuildContext context){
     SizeConfig().init(context);
     return Dialog(
@@ -22,6 +25,7 @@ Widget build(BuildContext context){
   }
   contentBox(context){
     return Container(
+      padding: EdgeInsets.only(top: SizeConfig.blockSizeVertical*5),
         height: SizeConfig.blockSizeVertical * 28.8 ,
         width:  SizeConfig.blockSizeHorizontal * 26.2,
         decoration: BoxDecoration(
@@ -42,9 +46,10 @@ Widget build(BuildContext context){
             ),
           ],
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          
           children: [
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -64,7 +69,7 @@ Widget build(BuildContext context){
                       vertical: SizeConfig.blockSizeVertical *2.5,
                       horizontal: SizeConfig.blockSizeHorizontal *1 ,
                     ),
-                    onPressed: (){},
+                    onPressed: () {},
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.horizontal(
                         left: const Radius.circular(100.0),
@@ -101,6 +106,7 @@ Widget build(BuildContext context){
                 ),
               ],
             ),
+
           ],
         ),
     );

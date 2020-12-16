@@ -184,7 +184,7 @@ class MediumHeadForm extends StatelessWidget {
           ),
 
           const Divider(
-            color: Colors.grey,
+            color: ApplicationColors.white,
             height: 70,
             thickness: 0.3,
             endIndent: 0,

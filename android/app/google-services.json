@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "479504792670",
+    "project_id": "roomfind-55b34",
+    "storage_bucket": "roomfind-55b34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479504792670:android:ece1f4760a5667bb4bc8cf",
+        "android_client_info": {
+          "package_name": "com.example.roomfind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479504792670-7gk4umihcpn46fpde6pqb2rpueg4ct0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk6vj-VnZVcb8_dDQwk8fxFJgUMJJw69E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479504792670-7gk4umihcpn46fpde6pqb2rpueg4ct0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

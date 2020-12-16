@@ -9,7 +9,7 @@ class NoSearchResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
+        child: ListView(
           children: [
             SelectHeadForm(),
             NoSearch(),

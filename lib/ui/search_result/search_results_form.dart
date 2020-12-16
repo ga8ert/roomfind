@@ -8,11 +8,13 @@ class SearchResultsForm extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: Column(
-        children: [
-          SelectHeadForm(),
-          SelectSearchForm(),
-        ],
+      body: Container(
+        child: ListView(
+          children: [
+            SelectHeadForm(),
+            SelectSearchForm(),
+          ],
+        ),
       ),
     );
   }

@@ -21,7 +21,7 @@ class MainForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Column(
+    return ListView(
       children:[
         Center(
           heightFactor: 3,
@@ -31,7 +31,8 @@ class MainForm extends StatelessWidget {
               SizedBox(
                 width: SizeConfig.safeBlockHorizontal * 15,
               ),
-             RaisedButton(
+
+              RaisedButton(
                  onPressed: () {
                   },
                  color:  ApplicationColors.light_blue,
@@ -42,8 +43,7 @@ class MainForm extends StatelessWidget {
                       right: const Radius.circular(100.0),
                     ),
                   ),
-
-                  child: Row(
+                 child: Row(
                     children: [
                       Icon(
                         Icons.download_rounded,
@@ -92,14 +92,13 @@ class MainForm extends StatelessWidget {
           ),
         ),
 
-         Row(
+        Row(
            mainAxisAlignment: MainAxisAlignment.center,
            children: [
              Container(
 
                 margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 20),
-               height: SizeConfig.safeBlockVertical * 13,
-               width: SizeConfig.safeBlockHorizontal * 100,
+
                 child: Column(
                   children:[
                     Text(ApplicationTexts.textLogotype,
@@ -110,6 +109,7 @@ class MainForm extends StatelessWidget {
              ),
            ],
          ),
+        SizedBox(height: SizeConfig.blockSizeVertical*8,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -117,8 +117,7 @@ class MainForm extends StatelessWidget {
               child:
                 Container(
                 padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockSizeHorizontal * 20),
-
-                child: TextField(
+                  child: TextField(
                   style: Styles.robotoW300Px12,
                   decoration: InputDecoration(
                     labelText: ApplicationTexts.textPhoneOrAddress,
