@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roomfind/ui/login/log_in_page.dart';
+import 'package:roomfind/ui/login/select_log_in_form.dart';
 import 'package:roomfind/ui/main/select_main_form.dart';
 import 'package:roomfind/ui/search_result/search_results_form.dart';
 import 'ui/search_result/no_search_results_form.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => SelectMainForm(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/search_results_screen': (context) => SearchResultsForm(),
-        '/log_in_page' : (context) => LogIn(),
+        '/log_in_page' : (context) => SelectLogInForm(),
         '/no_search_results_screen' : (context) => NoSearchResultsPage(),
 
       },

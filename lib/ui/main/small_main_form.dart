@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:roomfind/res/colors.dart';
 import 'package:roomfind/res/styles.dart';
-import 'package:roomfind/ui/login/log_in_form.dart';
+import 'package:roomfind/ui/login/large_log_in_form.dart';
+import 'package:roomfind/ui/login/select_log_in_form.dart';
 import 'package:roomfind/utils/size_config.dart';
 import 'package:roomfind/res/strings.dart';
 
@@ -57,7 +58,7 @@ class SmallMain extends StatelessWidget {
                 onPressed: () {
                   showDialog(
                     context: context,
-                    builder: (_) => LogInForm(),
+                    builder: (_) => SelectLogInForm(),
                   );
                 },
                 shape: CircleBorder(side: BorderSide(color: Colors.transparent)),

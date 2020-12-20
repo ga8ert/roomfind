@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:roomfind/ui/login/select_log_in_form.dart';
 
 import 'package:roomfind/utils/size_config.dart';
 
-import 'log_in_form.dart';
+import 'large_log_in_form.dart';
 
 class LogIn  extends StatelessWidget {
    @override
@@ -11,7 +12,7 @@ class LogIn  extends StatelessWidget {
      SizeConfig().init(context);
      return Scaffold(
        body: (
-       LogInForm()
+       SelectLogInForm()
        ),
      );
    }

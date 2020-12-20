@@ -7,26 +7,30 @@ import 'package:roomfind/utils/size_config.dart';
 
 
 
-class LogInForm extends StatelessWidget {
+class LargeLogInForm extends StatelessWidget {
 @override
 
 Widget build(BuildContext context){
     SizeConfig().init(context);
-    return Dialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.horizontal(
-            left: const Radius.circular(50.0),
-            right: const Radius.circular(50.0),
+    return ListView(
+      padding: EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical * 30),
+      children:[ Dialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.horizontal(
+              left: const Radius.circular(50.0),
+              right: const Radius.circular(50.0),
+            ),
           ),
-        ),
-        elevation: 0,
-        child: contentBox(context),
+          elevation: 0,
+          child: contentBox(context),
+      ),
+  ],
     );
   }
   contentBox(context){
     return Container(
-      padding: EdgeInsets.only(top: SizeConfig.blockSizeVertical*5),
-        height: SizeConfig.blockSizeVertical * 28.8 ,
+      //padding: EdgeInsets.only(top: SizeConfig.blockSizeVertical*5),
+        height: 250 ,
         width:  SizeConfig.blockSizeHorizontal * 26.2,
         decoration: BoxDecoration(
           border: Border.all(
@@ -46,8 +50,8 @@ Widget build(BuildContext context){
             ),
           ],
         ),
-        child: ListView(
-          
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
             Row(
@@ -58,7 +62,7 @@ Widget build(BuildContext context){
                 ),
               ],
             ),
-            SizedBox(height: SizeConfig.blockSizeVertical * 6,),
+            SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
