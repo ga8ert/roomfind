@@ -101,7 +101,7 @@ class LargeHeadForm extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.only(
+                    margin: EdgeInsets.only(
                       top: SizeConfig.blockSizeVertical * 5,
                     ),
                     child: TextField(
@@ -131,7 +131,7 @@ class LargeHeadForm extends StatelessWidget {
                         hintStyle: Styles.robotoW300Px12,
                         isDense: true,
                         contentPadding:
-                        EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical * 2.7, horizontal: SizeConfig.blockSizeVertical * 3),
+                        EdgeInsets.symmetric(vertical:  28, horizontal: SizeConfig.blockSizeVertical * 3),
                       ),
                     ),
                   ),

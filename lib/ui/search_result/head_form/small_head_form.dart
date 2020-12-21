@@ -121,7 +121,7 @@ class SmallHeadForm extends StatelessWidget {
                           hintStyle: Styles.robotoW300Px12,
                           isDense: true,
                           contentPadding:
-                          EdgeInsets.symmetric(vertical: SizeConfig.blockSizeVertical * 2.7, horizontal: SizeConfig.blockSizeVertical * 3),
+                          EdgeInsets.symmetric(vertical: 28, horizontal: SizeConfig.blockSizeVertical * 3),
                         ),
                       ),
                     ),
